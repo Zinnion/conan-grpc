@@ -8,9 +8,9 @@ class grpcConan(ConanFile):
     version = "1.19.1"
     description = "Google's RPC library and framework."
     topics = ("conan", "grpc", "rpc")
-    url = "https://github.com/inexorgame/conan-grpc"
+    url = "https://github.com/zinnion/conan-grpc"
     homepage = "https://github.com/grpc/grpc"
-    author = "Bincrafters <bincrafters@gmail.com>"
+    author = "Zinnion <mauro@zinnion.com>"
     license = "Apache-2.0"
     exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]
