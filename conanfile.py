@@ -36,10 +36,10 @@ class grpcConan(ConanFile):
     _build_subfolder = "build_subfolder"
 
     requires = (
-        "zlib/1.2.11@conan/stable",
-        "OpenSSL/1.1.1a@conan/stable",
+        "zlib/1.2.11@zinnion/stable",
+        "OpenSSL/1.1.1b@zinnion/stable",
         "protobuf/3.7.1@zinnion/stable",
-        "c-ares/1.14.0@conan/stable",
+        "c-ares/1.14.0@zinnion/stable",
     )
 
     def configure(self):
@@ -74,7 +74,7 @@ class grpcConan(ConanFile):
     def build_requirements(self):
         if self.options.build_tests:
             self.build_requires("benchmark/1.4.1@inexorgame/stable")
-            self.build_requires("gflags/2.2.2@bincrafters/stable")
+            self.build_requires("gflags/2.2.2@zinnion/stable")
 
     def _configure_cmake(self):
         cmake = CMake(self)
