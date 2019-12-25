@@ -5,7 +5,7 @@ import os
 
 class grpcConan(ConanFile):
     name = "grpc"
-    version = "1.25.0"
+    version = "1.26.0"
     description = "Google's RPC library and framework."
     topics = ("conan", "grpc", "rpc")
     url = "https://github.com/zinnion/conan-grpc"
@@ -38,7 +38,7 @@ class grpcConan(ConanFile):
     requires = (
         "zlib/1.2.11@zinnion/stable",
         "OpenSSL/1.1.1d@zinnion/stable",
-        "protobuf/3.11.0-rc2@zinnion/stable",
+        "protobuf/3.11.2@zinnion/stable",
         "c-ares/1.14.0@zinnion/stable",
     )
 
@@ -51,7 +51,7 @@ class grpcConan(ConanFile):
 
     def source(self):
         archive_url = "https://github.com/grpc/grpc/archive/v{}.zip".format(self.version)
-        tools.get(archive_url, sha256="82de7c3754df7be44c65fd00decd5e2351ea64e4d21fdaf6d76cea5676f954e8")
+        tools.get(archive_url, sha256="b90b2328e8546065578cc7a2b354ba50461365e162d8745e539045b1ca040963")
         os.rename("grpc-{!s}".format(self.version), self._source_subfolder)
 
         # cmake_name = "{}/CMakeLists.txt".format(self._source_subfolder)
